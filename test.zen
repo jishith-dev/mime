@@ -1,0 +1,21 @@
+import (Mime) from "lib.zen"
+
+Mime mime
+
+screen(mime.type("index.html"))
+screen(mime.type("style.css"))
+screen(mime.type("app.js"))
+screen(mime.type("data.json"))
+screen(mime.type("image.png"))
+screen(mime.type("photo.jpg"))
+screen(mime.type("document.pdf"))
+screen(mime.type("movie.mp4"))
+screen(mime.type("font.woff2"))
+screen(mime.type("unknown.xyz"))
+
+screen(mime.isText("index.html"))
+screen(mime.isText("data.json"))
+screen(mime.isText("image.png"))
+
+screen(mime.isBinary("image.png"))
+screen(mime.isBinary("app.js"))

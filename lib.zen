@@ -1,0 +1,152 @@
+struct Mime {
+
+    type(string filename) string {
+        string ext = path.extname(filename)
+
+        if (ext == ".html" || ext == ".htm") {
+            return "text/html"
+        }
+
+        if (ext == ".css") {
+            return "text/css"
+        }
+
+        if (ext == ".js" || ext == ".mjs") {
+            return "text/javascript"
+        }
+
+        if (ext == ".json") {
+            return "application/json"
+        }
+
+        if (ext == ".xml") {
+            return "application/xml"
+        }
+
+        if (ext == ".txt") {
+            return "text/plain"
+        }
+
+        if (ext == ".csv") {
+            return "text/csv"
+        }
+
+        if (ext == ".md") {
+            return "text/markdown"
+        }
+
+        if (ext == ".svg") {
+            return "image/svg+xml"
+        }
+
+        if (ext == ".png") {
+            return "image/png"
+        }
+
+        if (ext == ".jpg" || ext == ".jpeg") {
+            return "image/jpeg"
+        }
+
+        if (ext == ".gif") {
+            return "image/gif"
+        }
+
+        if (ext == ".webp") {
+            return "image/webp"
+        }
+
+        if (ext == ".avif") {
+            return "image/avif"
+        }
+
+        if (ext == ".ico") {
+            return "image/x-icon"
+        }
+
+        if (ext == ".bmp") {
+            return "image/bmp"
+        }
+
+        if (ext == ".mp3") {
+            return "audio/mpeg"
+        }
+
+        if (ext == ".wav") {
+            return "audio/wav"
+        }
+
+        if (ext == ".ogg") {
+            return "audio/ogg"
+        }
+
+        if (ext == ".mp4") {
+            return "video/mp4"
+        }
+
+        if (ext == ".webm") {
+            return "video/webm"
+        }
+
+        if (ext == ".avi") {
+            return "video/x-msvideo"
+        }
+
+        if (ext == ".pdf") {
+            return "application/pdf"
+        }
+
+        if (ext == ".zip") {
+            return "application/zip"
+        }
+
+        if (ext == ".gz") {
+            return "application/gzip"
+        }
+
+        if (ext == ".tar") {
+            return "application/x-tar"
+        }
+
+        if (ext == ".wasm") {
+            return "application/wasm"
+        }
+
+        if (ext == ".woff") {
+            return "font/woff"
+        }
+
+        if (ext == ".woff2") {
+            return "font/woff2"
+        }
+
+        if (ext == ".ttf") {
+            return "font/ttf"
+        }
+
+        if (ext == ".otf") {
+            return "font/otf"
+        }
+
+        return "application/octet-stream"
+    }
+
+    isText(string filename) bool {
+        string mime = this.type(filename)
+
+        return mime == "text/html" ||
+               mime == "text/css" ||
+               mime == "text/javascript" ||
+               mime == "text/plain" ||
+               mime == "text/csv" ||
+               mime == "text/markdown" ||
+               mime == "application/json" ||
+               mime == "application/xml" ||
+               mime == "image/svg+xml"
+    }
+
+    isBinary(string filename) bool {
+        return !this.isText(filename)
+    }
+}
+
+export (Mime)
