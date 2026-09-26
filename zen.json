@@ -1,6 +1,6 @@
 {
   "name": "mime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Jishith-dev",
   "repo": "https://github.com/Jishith-dev/mime",
   "description": "MIME type detection for Zen",

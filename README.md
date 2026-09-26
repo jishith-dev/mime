@@ -1,5 +1,7 @@
 # mime
 
+Author: Jishith M P
+
 MIME type detection for the Zen programming language.
 
 ## Usage

@@ -1,7 +1,7 @@
 struct Mime {
-
     type(string filename) string {
         string ext = path.extname(filename)
+        ext = lowerCase(ext)
 
         if (ext == ".html" || ext == ".htm") {
             return "text/html"
